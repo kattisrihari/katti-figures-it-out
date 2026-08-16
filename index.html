@@ -5,49 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Links</title>
   <style>
+    :root {
+      --bg: #ffffff;
+      --text-main: #111111;
+      --text-muted: #666666;
+      --accent: #2563eb; /* Professional tech blue */
+      --card-bg: #f9f9f9;
+      --border: #e5e5e5;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 50px 20px;
+      padding: 80px 20px;
       margin: 0;
+      line-height: 1.5;
     }
     h1 {
-      color: #333;
-      margin-bottom: 20px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+    .links-container {
+      width: 100%;
+      max-width: 450px;
     }
     .link-card {
+      display: block;
       width: 100%;
-      max-width: 400px;
-      background: #ffffff;
-      color: #333;
+      background: var(--card-bg);
+      color: var(--text-main);
       text-decoration: none;
-      text-align: center;
-      padding: 15px 0;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      font-weight: bold;
-      transition: transform 0.2s, background-color 0.2s;
+      text-align: left;
+      padding: 18px 24px;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-weight: 500;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
     }
     .link-card:hover {
-      transform: translateY(-2px);
-      background-color: #007bff;
-      color: #ffffff;
+      background-color: #f1f5f9;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .link-card span {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 400;
     }
   </style>
 </head>
 <body>
 
-  <h1>My Important Links</h1>
+  <h1>Connect</h1>
 
+  <div class="links-container">
+    <!-- Replace href with your links -->
+    <a class="link-card" href="https://github.com/yourusername" target="_blank">
+      GitHub
+      <span>Code, projects, and proof of work</span>
+    </a>
+    <a class="link-card" href="https://linkedin.com/in/yourprofile" target="_blank">
+      LinkedIn
+      <span>Professional network and updates</span>
+    </a>
+    <a class="link-card" href="mailto:you@example.com" target="_blank">
+      Email
+      <span>Open to conversations and opportunities</span>
+    </a>
+  </div>
+
+</body>
+</html>
+<h1> Welcome! Katti recommends you check these sites out :) : </h1>
   <!-- Edit your links below -->
   <a class="link-card" href="https://www.ooru.work/" target="_blank">Ooru.work. A Network for namma kannadigas where professionals and students build their network so that referrals can get you interviews / X</a>
-  <a class="link-card" href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-  <a class="link-card" href="https://github.com/yourusername" target="_blank">GitHub Profile</a>
-  <a class="link-card" href="https://yourportfolio.com" target="_blank">Portfolio Website</a>
+  <a class="link-card" href="https://www.bangalorestartupmap.com/" target="_blank">Startup maps in Benegaluru. Check who's getting funded in what area! </a>
+
 
 </body>
 </html>
