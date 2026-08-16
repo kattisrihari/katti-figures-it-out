@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Links</title>
+  <title>Katti Recommends</title>
   <style>
     :root {
-      --bg: #ffffff;
-      --text-main: #111111;
-      --text-muted: #666666;
-      --accent: #2563eb; /* Professional tech blue */
-      --card-bg: #f9f9f9;
-      --border: #e5e5e5;
+      --bg: #0d1117;              /* ooru.work signature deep background */
+      --card-bg: #161b22;         /* slightly lighter card background */
+      --text-main: #f0f6fc;       /* crisp white text */
+      --text-muted: #8b949e;      /* muted gray for descriptions */
+      --border: #30363d;          /* subtle structural borders */
+      --orange-accent: #ff6b00;   /* ooru.work primary orange */
+      --purple-accent: #8b5cf6;   /* ooru.work primary purple */
     }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg);
@@ -20,20 +22,45 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 80px 20px;
+      padding: 60px 20px;
       margin: 0;
       line-height: 1.5;
     }
+
+    .header-container {
+      text-align: center;
+      max-width: 500px;
+      margin-bottom: 32px;
+    }
+
     h1 {
       font-size: 1.5rem;
       font-weight: 600;
-      margin-bottom: 40px;
       letter-spacing: -0.5px;
+      margin: 0 0 8px 0;
     }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .highlight-orange {
+      color: var(--orange-accent);
+      font-weight: 600;
+    }
+
+    .highlight-purple {
+      color: var(--purple-accent);
+      font-weight: 600;
+    }
+
     .links-container {
       width: 100%;
-      max-width: 450px;
+      max-width: 480px;
     }
+
     .link-card {
       display: block;
       width: 100%;
@@ -41,55 +68,63 @@
       color: var(--text-main);
       text-decoration: none;
       text-align: left;
-      padding: 18px 24px;
-      margin-bottom: 12px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
       border-radius: 12px;
       border: 1px solid var(--border);
-      font-weight: 500;
-      transition: all 0.2s ease;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.2s ease-in-out;
       box-sizing: border-box;
+      position: relative;
     }
-    .link-card:hover {
-      background-color: #f1f5f9;
-      border-color: var(--accent);
-      transform: translateY(-1px);
+
+    /* Orange gradient hover effect for the first type of cards */
+    .link-card.orange-theme:hover {
+      border-color: var(--orange-accent);
+      background: linear-gradient(180deg, #161b22 0%, rgba(255, 107, 0, 0.08) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 107, 0, 0.15);
     }
+
+    /* Purple gradient hover effect for the second type of cards */
+    .link-card.purple-theme:hover {
+      border-color: var(--purple-accent);
+      background: linear-gradient(180deg, #161b22 0%, rgba(139, 92, 246, 0.08) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+    }
+
     .link-card span {
       display: block;
-      font-size: 0.85rem;
+      font-size: 0.875rem;
       color: var(--text-muted);
-      margin-top: 4px;
+      margin-top: 6px;
       font-weight: 400;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
 
-  <h1>Connect</h1>
-
-  <div class="links-container">
-    <!-- Replace href with your links -->
-    <a class="link-card" href="https://github.com/yourusername" target="_blank">
-      GitHub
-      <span>Code, projects, and proof of work</span>
-    </a>
-    <a class="link-card" href="https://linkedin.com/in/yourprofile" target="_blank">
-      LinkedIn
-      <span>Professional network and updates</span>
-    </a>
-    <a class="link-card" href="mailto:you@example.com" target="_blank">
-      Email
-      <span>Open to conversations and opportunities</span>
-    </a>
+  <div class="header-container">
+    <h1>Welcome!</h1>
+    <p class="subtitle">Katti recommends you check these <span class="highlight-orange">sites</span> <span class="highlight-purple">out :)</span></p>
   </div>
 
-</body>
-</html>
-<h1> Welcome! Katti recommends you check these sites out :) : </h1>
-  <!-- Edit your links below -->
-  <a class="link-card" href="https://www.ooru.work/" target="_blank">Ooru.work. A Network for namma kannadigas where professionals and students build their network so that referrals can get you interviews / X</a>
-  <a class="link-card" href="https://www.bangalorestartupmap.com/" target="_blank">Startup maps in Benegaluru. Check who's getting funded in what area! </a>
+  <div class="links-container">
+    <!-- Card with Orange accent on hover -->
+    <a class="link-card orange-theme" href="https://www.ooru.work/" target="_blank">
+      <span class="highlight-orange" style="font-size: 1.05rem; margin: 0;">Ooru.work</span>
+      <span>A network for namma Kannadigas where professionals and students build their network so referrals can get you interviews.</span>
+    </a>
 
+    <!-- Card with Purple accent on hover -->
+    <a class="link-card purple-theme" href="https://www.bangalorestartupmap.com/" target="_blank">
+      <span class="highlight-purple" style="font-size: 1.05rem; margin: 0;">Bengaluru Startup Map</span>
+      <span>Startup maps in Bengaluru. Check who's getting funded in what area!</span>
+    </a>
+  </div>
 
 </body>
 </html>
